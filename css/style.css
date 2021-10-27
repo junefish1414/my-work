@@ -15,7 +15,7 @@ body {
   overflow-y: scroll;
   padding: 0;
   margin: 0;
-  background-color: #47533F;
+  background-color: #1F251B;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -147,8 +147,8 @@ figure {
   display: block;
   color: rgba(255, 255, 255, 0.5);
   text-decoration: none;
-  padding: 0 1.5vw;
-  font-size: 1.15vw;
+  padding: 3px 1.5vw;
+  font-size: 1vw;
   overflow: hidden;
 }
 .filter__link-mask {
@@ -158,7 +158,7 @@ figure {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background-color: #111;
+  background-color: #47533F;
   -webkit-transform: translate3d(-100%, 0, 0);
           transform: translate3d(-100%, 0, 0);
   transition: -webkit-transform .75s ease;
@@ -168,8 +168,8 @@ figure {
 }
 .filter__link-mask span {
   display: block;
-  padding: 0 1.5vw;
-  font-size: 1.15vw;
+  padding: 3px 1.5vw;
+  font-size: 1vw;
   -webkit-transform: translate3d(100%, 0, 0);
           transform: translate3d(100%, 0, 0);
   transition: -webkit-transform .75s ease;
@@ -210,6 +210,9 @@ figure {
   padding-left: 15vw;
   width: 100%;
 }
+.slide__inner:hover .slide__img:before{
+  opacity: 0;
+}
 .slide__sub-title {
   position: absolute;
   top: 15%;
@@ -220,11 +223,12 @@ figure {
 .slide__title {
   position: absolute;
   top: 7.5%;
-  left: 7.5vw;
+  left: 6.5vw;
   color: #fff;
   font-size: 4vw;
   z-index: 2;
   overflow: hidden;
+  text-shadow: 0px 0px 6px rgb(0 0 0 / 30%);
 }
 .slide__project {
   color: #fff;
@@ -237,8 +241,18 @@ figure {
 .slide__img {
   position: relative;
   overflow: hidden;
-  padding-top: 65%;
+  padding-top: 58%;
   width: 100%;
+  transition: ease .3s;
+}
+.slide__img:before{
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color:rgba(0,0,0,0.3);
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 .slide__img figure {
   position: absolute;
