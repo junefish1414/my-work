@@ -9,9 +9,9 @@
 	<link rel="stylesheet" type="text/css" href="css/htmleaf-demo.css"><!--演示页面样式，使用时可以不引用-->
 	<link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
+<body class="graphicbody">
 
-<figure class="logo logo--top js-trigger">
+<figure class="logo logo--top js-trigger" onClick="window.location.href='index.html'">
   <img src="img/logo.svg">
 </figure>
 
@@ -41,19 +41,19 @@
   <nav class="filter">
     <ul class="filter__list">
       <li class="filter__item">
-        <a href="#index.html" class="filter__link is-active js-trigger">
+        <a href="index.html" class="filter__link  js-trigger" onClick="window.location.href='index.html'" >
           <div class="filter__link-mask" area-hidden><span>網頁設計</span></div>
           網頁設計
         </a>   
       </li>
       <li class="filter__item">
-        <a href="graphic.html" class="filter__link js-trigger">
+        <a href="graphic.html" class="filter__link is-active js-trigger" onClick="window.location.href='graphic.html'">
           <div class="filter__link-mask" area-hidden><span>平面設計</span></div>
           平面設計
         </a>   
       </li>
       <li class="filter__item">
-        <a href="other.html" class="filter__link js-trigger">
+        <a href="other.html" class="filter__link js-trigger" onClick="window.location.href='other.html'">
           <div class="filter__link-mask" area-hidden><span>其他設計</span></div>
           其他設計
         </a>   

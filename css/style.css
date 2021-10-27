@@ -15,11 +15,17 @@ body {
   overflow-y: scroll;
   padding: 0;
   margin: 0;
-  background-color: #1F251B;
+  background-color:#213527 ;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+}
+.graphicbody{
+  background-color:#1d323a ;
+}
+.otherbody{
+  background-color: #352c21;
 }
 
 h1, h2 {
