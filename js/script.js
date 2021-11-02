@@ -390,7 +390,7 @@ const modalSub = document.querySelector('#modalSub')
 const modalText = document.querySelector('#modalText')
 const all = [
   {
-    picSrc: 'img/graphic01-zoom.jpg',
+    picSrc: 'img/graphic01-zoom.png',
     picSrc2: '',
     title: '文瀚苑銷售精裝書',
     sub: '2018 築優建設 設計一版',
