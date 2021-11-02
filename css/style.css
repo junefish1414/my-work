@@ -7,7 +7,7 @@
 }
 html, body {
   height: 100%;
-  font-family: 'helvetica neue';
+  font-family: 'Raleway', sans-serif;;
 }
 
 body {
@@ -172,6 +172,9 @@ figure {
   transition: transform .75s ease, -webkit-transform .75s ease;
   z-index: 2;
 }
+.graphicbody .filter__link-mask{
+  background-color: #355460;
+}
 .filter__link-mask span {
   display: block;
   padding: 3px 1.5vw;
@@ -190,6 +193,10 @@ figure {
 .filter__link:hover .filter__link-mask, .filter__link.is-active .filter__link-mask {
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
+}
+/*設定拖曳符號改成連結*/
+.slide-connect{
+  cursor: pointer;
 }
 
 .slide {
@@ -215,6 +222,7 @@ figure {
   position: relative;
   padding-left: 15vw;
   width: 100%;
+  transition: ease .3s;
 }
 .slide__inner:hover .slide__img:before{
   opacity: 0;
@@ -228,21 +236,43 @@ figure {
 }
 .slide__title {
   position: absolute;
-  top: 7.5%;
+  top: 13.5%;
   left: 6.5vw;
   color: #fff;
-  font-size: 4vw;
+  font-size: 3vw;
+  letter-spacing: 1.5px;
   z-index: 2;
   overflow: hidden;
   text-shadow: 0px 0px 6px rgb(0 0 0 / 30%);
 }
+.slide__title span{
+  font-size: 1vw;
+  color: #DDD;
+  font-weight: 300;
+  letter-spacing:2px;
+  display: block;
+  margin-top: 5px;
+}
+.slide_add_icon{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 1.15vw;
+  position: absolute;
+  right: 0;
+  transition: ease .3s;
+}
+.slide_add_icon:hover{
+  letter-spacing: 3px;
+}
+.slide_add_icon img{
+  width: 15px;
+  height: 15px;
+}
 .slide__project {
   color: #fff;
-  position: absolute;
-  top: 100%;
-  right: 5%;
   font-size: 1.15vw;
-  padding-top: 1.5vw;
+  margin-right: 1.15vw;
 }
 .slide__img {
   position: relative;
@@ -252,6 +282,7 @@ figure {
   transition: ease .3s;
 }
 .slide__img:before{
+  transition: ease .3s;
   content: '';
   width: 100%;
   height: 100%;
@@ -372,6 +403,86 @@ img {
 .resize span {
   color: rgba(255, 255, 255, 0.5);
 }
+
+/* modal嘗試 */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 9999; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+.modal::-webkit-scrollbar {display:none}
+/* Modal Content (Image) */
+.modalImg {
+  margin: 0;
+  display: block;
+  width: 50%;
+}
+
+#img02{
+  display: none;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+  margin: 0;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  width: 50%;
+  text-align: left;
+  color: #ccc;
+  height: auto;
+  padding-left: 3vw;
+}
+
+/* Add Animation - Zoom in the Modal */
+#caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform:translateY(-75%)}
+  to {transform:translateY(-50%)}
+}
+
+/* The Close Button */
+.close {
+  position: fixed;
+  font-family: 'Raleway', sans-serif;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: 300;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
+
+
 @media (max-width: 800px) {
   .resize {
     display: block;

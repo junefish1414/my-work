@@ -159,7 +159,8 @@ class Smooth {
   }
 
   resize () {
-    this.setBounds()}
+    this.setBounds()
+  }
 
   addEvents () {
     window.addEventListener('scroll', this.scroll, { passive: true })
@@ -375,3 +376,63 @@ btn.addEventListener('mouseleave', () => {
       ease: Bounce.easeOut
     })
 })
+
+// Get the modal
+const modal = document.getElementById('myModal')
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+const img = document.querySelectorAll('.myImg')
+const modalImg = document.getElementById('img01')
+const modalImg2 = document.getElementById('img02')
+// const captionText = document.getElementById('caption')
+const modalTitle = document.querySelector('#modalTitle')
+const modalSub = document.querySelector('#modalSub')
+const modalText = document.querySelector('#modalText')
+const all = [
+  {
+    picSrc: 'img/graphic01-zoom.jpg',
+    picSrc2: '',
+    title: '文瀚苑銷售精裝書',
+    sub: '2018 築優建設 設計一版',
+    text: 'EveryDay is good Day EveryDay is good DayEveryDay is good DayEveryDay is good DayEveryDay is good Day'
+  },
+  {
+    picSrc: 'img/graphic02-zoom.png',
+    picSrc2: 'img/graphic02-zoom2.png',
+    title: '文瀚苑銷售精裝書2',
+    sub: '2018 築優建設 設計二版',
+    text: 'OohOooh OohOooh OohOooh OohOooh OohOooh OohOooh OohOooh OohOooh OohOooh OohOooh OohOooh '
+  }
+]
+img.forEach((item, index) => item.addEventListener('click', function () {
+  modal.style.display = 'flex'
+  modal.style.justifyContent = 'flex-start'
+  modal.style.alignItems = 'flex-start'
+  modalImg.src = `${all[index].picSrc}`
+  if (all[index].picSrc2 !== '') {
+    modalImg2.style.display = 'block'
+    modalImg2.src = `${all[index].picSrc2}`
+  } else {
+    modalImg2.style.display = 'none'
+  }
+  modalTitle.innerHTML = `${all[index].title}`
+  modalSub.innerHTML = `${all[index].sub}`
+  modalText.innerHTML = `${all[index].text}`
+
+  console.log('感動，我有好好完成唷QQ')
+}))
+// const openModal = function () {
+//   modal.style.display = 'flex'
+//   modal.style.justifyContent = 'flex-start'
+//   modal.style.alignItems = 'center'
+//   modalImg.src = 'img/graphic01-zoom.jpg'
+//   captionText.innerHTML = '2018 築優建設 文瀚苑銷售精裝書設計一版'
+// }
+
+// Get the <span> element that closes the modal
+const span = document.getElementsByClassName('close')[0]
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function () {
+  modal.style.display = 'none'
+}

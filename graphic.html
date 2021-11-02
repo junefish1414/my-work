@@ -4,12 +4,27 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>June's works</title>
+	<title>June's Portfolio</title>
+  <link rel="icon" href="img/favicon.ico">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css" /><!--CSS RESET-->
-	<link rel="stylesheet" type="text/css" href="css/htmleaf-demo.css"><!--演示页面样式，使用时可以不引用-->
 	<link rel="stylesheet" href="./css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="graphicbody">
+
+    <!-- modal嘗試 -->
+    <div id="myModal" class="modal">
+      <span class="close">X</span>
+      <div class="modalImg"><img class="modal-content" id="img01"><img class="modal-content" id="img02"></div>
+      <div id="caption">
+        <h1 id="modalTitle"></h1>
+        <h3 id="modalSub"></h3>
+        <p id ="modalText"></p>
+      </div>
+    </div>
+
 
 <figure class="logo logo--top js-trigger" onClick="window.location.href='index.html'">
   <img src="img/logo.svg">
@@ -28,7 +43,7 @@
   Learn more about me
 </a>
 
-<a href="https://junefish1414.github.io/my-work/" target="_blank" rel="nofollow" class="menu-btn js-menu-btn">
+<a href="https://github.com/junefish1414/my-work" target="_blank" rel="nofollow" class="menu-btn js-menu-btn">
   <div class="menu-btn__circles">
     <span class="menu-btn__circle menu-btn__circle--top js-menu-btn__circle--top"></span>
     <span class="menu-btn__circle menu-btn__circle--bottom js-menu-btn__circle--bottom"></span>
@@ -41,13 +56,13 @@
   <nav class="filter">
     <ul class="filter__list">
       <li class="filter__item">
-        <a href="index.html" class="filter__link is-active js-trigger" onClick="window.location.href='index.html'" >
+        <a href="index.html" class="filter__link js-trigger" onClick="window.location.href='index.html'" >
           <div class="filter__link-mask" area-hidden><span>網頁設計</span></div>
           網頁設計
         </a>   
       </li>
       <li class="filter__item">
-        <a href="graphic.html" class="filter__link  js-trigger" onClick="window.location.href='graphic.html'">
+        <a href="graphic.html" class="filter__link is-active   js-trigger" onClick="window.location.href='graphic.html'">
           <div class="filter__link-mask" area-hidden><span>平面設計</span></div>
           平面設計
         </a>   
@@ -67,7 +82,7 @@
       <div class="slide__inner">
         <div class="slide__img js-transition-img">
           <figure class="js-transition-img__inner">
-            <img src="img/work01.png" draggable="false">
+            <img src="img/graphic01.png" draggable="false">
           </figure>
         </div>
       </div>
@@ -77,7 +92,7 @@
       <div class="slide__inner">
         <div class="slide__img js-transition-img">
           <figure class="js-transition-img__inner">
-            <img src="img/work02.png" draggable="false">
+            <img src="img/graphic02.png" draggable="false">
           </figure>
         </div>
       </div>
@@ -87,7 +102,7 @@
       <div class="slide__inner">
         <div class="slide__img">
           <figure>
-            <img src="img/work03.png" draggable="false">
+            <img src="img/graphic03.png" draggable="false">
           </figure>
         </div>
       </div>
@@ -97,7 +112,7 @@
       <div class="slide__inner">
         <div class="slide__img">
           <figure>
-            <img src="img/work04.png" draggable="false">
+            <img src="img/graphic04.png" draggable="false">
           </figure>
         </div>
       </div>
@@ -107,7 +122,7 @@
       <div class="slide__inner">
         <div class="slide__img">
           <figure>
-            <img src="img/work05.png" draggable="false">
+            <img src="img/graphic05.png" draggable="false">
           </figure>
         </div>
       </div>
@@ -118,58 +133,77 @@
   <div class="scroll-content scroll-content--last" data-scroll-content>
     
     <article class="slide slide--1 js-slide">
-      <div class="slide__inner">
-        <div class="slide__sub-title"><span>網頁設計專案</span></div>
-        <h1 class="slide__title"><div class="js-transition-title">這是設計那一頁</div></h1>
-        <div class="slide__img slide__img--proxy"></div>
-        <div class="slide__project">前往瀏覽</div>
-      </div>
+      <a class="slide-connect" >
+        <div class="slide__inner">
+          <div class="slide__sub-title"><span>平面設計</span></div>
+          <h1 class="slide__title"><div class="js-transition-title">文瀚苑<span>精裝書設計一版</span></div></h1>
+          </a><div class="slide__img slide__img--proxy"></div>
+          <a class="slide-connect slide_add_icon myImg">
+            <div class="slide__project">了解更多 </div>
+            <img src="img/zoom-icon.svg" alt="">
+          </a>
+        </div>
+      </a>
     </article>
+
+
     
     <article class="slide slide--2 js-slide">
-      <div class="slide__inner">
-        <div class="slide__sub-title"><span>網頁設計專案</span></div>
-        <h1 class="slide__title"><div class="js-transition-title">Teton Residence</div></h1>
-        <div class="slide__img slide__img--proxy"></div>
-        <div class="slide__project">Ro Rocket Design</div>
-      </div>
+      <a class="slide-connect" href="https://www.lawyer-fredliu.com/" target="_blank">
+        <div class="slide__inner">
+          <div class="slide__sub-title"><span>平面設計</span></div>
+          <h1 class="slide__title"><div class="js-transition-title">文瀚苑<span>精裝書設計二版</span></div></h1>
+          </a><div class="slide__img slide__img--proxy"></div>
+          <a class="slide-connect slide_add_icon myImg">
+            <div class="slide__project">了解更多 </div>
+            <img src="img/zoom-icon.svg" alt="">
+          </a>
+        </div>
+      </a>
     </article>
     
     <article class="slide slide--3 js-slide" id="NO3">
-      <div class="slide__inner">
-        <div class="slide__sub-title"><span>網頁設計專案</span></div>
-        <h1 class="slide__title">Oak Refuge</h1>
-        <div class="slide__img slide__img--proxy"></div>
-        <div class="slide__project">Corpus Studio</div>
-      </div>
+      <a class="slide-connect" href="http://www.powerloan.com.tw/" target="_blank">
+        <div class="slide__inner">
+          <div class="slide__sub-title"><span>平面設計</span></div>
+          <h1 class="slide__title"><div class="js-transition-title">氣．象<span>三人聯展</span></div></h1>
+          </a><div class="slide__img slide__img--proxy"></div>
+          <a class="slide-connect slide_add_icon" href="http://www.powerloan.com.tw/" target="_blank">
+            <div class="slide__project">了解更多 </div>
+            <img src="img/zoom-icon.svg" alt="">
+          </a>
+        </div>
+      </a>
     </article>
 
     <article class="slide slide--1 js-slide">
-      <div class="slide__inner">
-        <div class="slide__sub-title"><span>網頁設計專案</span></div>
-        <h1 class="slide__title">Teton Residence</h1>
-        <div class="slide__img slide__img--proxy"></div>
-        <div class="slide__project">Ro Rocket Design</div>
-      </div>
+      <a class="slide-connect" href="http://www.betonbrut.com.tw/" target="_blank">
+        <div class="slide__inner">
+          <div class="slide__sub-title"><span>平面設計</span></div>
+          <h1 class="slide__title"><div class="js-transition-title">卓越文教<span>DM設計</span></div></h1>
+          </a><div class="slide__img slide__img--proxy"></div>
+          <a class="slide-connect slide_add_icon" href="http://www.betonbrut.com.tw/" target="_blank">
+            <div class="slide__project">了解更多 </div>
+            <img src="img/zoom-icon.svg" alt="">
+          </a>
+        </div>
+      </a>
     </article>
     
     <article class="slide slide--2 js-slide">
-      <div class="slide__inner">
-        <div class="slide__sub-title"><span>網頁設計專案</span></div>
-        <h1 class="slide__title">Oak Refuge</h1>
-        <div class="slide__img slide__img--proxy"></div>
-        <div class="slide__project">Corpus Studio</div>
-      </div>
+      <a class="slide-connect" href="http://www.shiouda.com.tw/" target="_blank">
+        <div class="slide__inner">
+          <div class="slide__sub-title"><span>平面設計</span></div>
+          <h1 class="slide__title"><div class="js-transition-title">小林煎餅禮盒<span>2018。中秋禮盒設計</span></div></h1>
+          </a><div class="slide__img slide__img--proxy"></div>
+          <a class="slide-connect slide_add_icon" href="http://www.shiouda.com.tw/" target="_blank">
+            <div class="slide__project">了解更多 </div>
+            <img src="img/zoom-icon.svg" alt="">
+          </a>
+        </div>
+      </a>
     </article>
     
-    <article class="slide slide--3 js-slide">
-      <div class="slide__inner">
-        <div class="slide__sub-title"><span>網頁設計專案</span></div>
-        <h1 class="slide__title">Teton Residence</h1>
-        <div class="slide__img slide__img--proxy"></div>
-        <div class="slide__project">Ro Rocket Design</div>
-      </div>
-    </article>
     
   </div>
   
