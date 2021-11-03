@@ -15,7 +15,7 @@ body {
   overflow-y: scroll;
   padding: 0;
   margin: 0;
-  background-color:#213527 ;
+  background-color:#1b261e ;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -25,7 +25,7 @@ body {
   background-color:#1d323a ;
 }
 .otherbody{
-  background-color: #352c21;
+  background-color: #302f2c;
 }
 
 h1, h2 {
@@ -173,6 +173,9 @@ figure {
   z-index: 2;
 }
 .graphicbody .filter__link-mask{
+  background-color: #355460;
+}
+.otherbody .filter__link-mask{
   background-color: #355460;
 }
 .filter__link-mask span {
@@ -441,7 +444,7 @@ img {
   text-align: left;
   color: #ccc;
   height: auto;
-  padding-left: 3vw;
+  padding:0 3vw;
 }
 
 /* Add Animation - Zoom in the Modal */
